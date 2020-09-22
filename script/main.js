@@ -18,13 +18,16 @@ class CalculatorUI{
     }       
   }
   OnNumbers_Click=(e)=>{
-    this.DisplayMessage(this.Engine.SetNumbers(e.target.value));
+    var text=this.Engine.SetNumbers(e.target.value);
+    this.DisplayMessage(text);
   }
   OnOperator_Click=(e)=>{
-    this.DisplayMessage(this.Engine.SetOperator(e.target.value));
+    var text=this.Engine.SetOperator(e.target.value)
+    this.DisplayMessage(text);
   }
   OnEqual_Click=()=>{
-    this.DisplayMessage(this.Engine.Calculate());
+    var text=this.Engine.Calculate()
+    this.DisplayMessage(text);
   }
   OnReset_Click=()=>{
     this.Engine.Reset();
